@@ -9,7 +9,7 @@
 
         @include('layouts.sidebar')
 
-        <div class="flex-1 flex flex-col bg-gray-50 ">
+        <div class="flex-1 flex flex-col bg-gray-50 ml-64 min-h-screen overflow-auto">
 
             @include('layouts.navbar')
 

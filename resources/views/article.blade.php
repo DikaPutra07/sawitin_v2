@@ -4,7 +4,7 @@
 <div class="flex">
 
     <!-- Main Content -->
-    <main class="flex-1 p-6 bg-gray-100">
+    <main class="flex-1 p-6">
         <div class="flex items-center justify-between mb-6">
             <h2 class="text-xl font-semibold">Artikel Terkait</h2>
             <div class="flex items-center space-x-2">

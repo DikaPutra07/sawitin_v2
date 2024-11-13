@@ -1,4 +1,4 @@
-<div class="w-64 bg-white flex flex-col justify-between shadow-md">
+<div class="w-64 bg-white flex flex-col justify-between shadow-md fixed h-full">
     <!-- Top Logo and Title -->
 
     <!-- Navigation Links -->
