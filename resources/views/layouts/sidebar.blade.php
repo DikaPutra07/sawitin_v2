@@ -1,4 +1,4 @@
-<div class="w-64 bg-white flex flex-col justify-between shadow-md fixed h-full">
+<div class="w-64 bg-creme flex flex-col justify-between shadow-md fixed h-full">
     <!-- Top Logo and Title -->
 
     <!-- Navigation Links -->
@@ -8,7 +8,7 @@
             <span class="text-lg font-semibold">Kelapa Sawit</span>
         </div>
 
-        <a href="/" class="flex items-center px-4 py-3 rounded-md {{ Request::is('/') ? 'bg-green-500 text-white' : 'text-gray-700 hover:bg-gray-100' }}">
+        <a href="/" class="flex items-center px-4 py-3 rounded-md {{ Request::is('/') ? 'bg-greenModal text-white' : 'text-gray-700 hover:bg-gray-100' }}">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect width="7" height="9" x="3" y="3" rx="1" />
                 <rect width="7" height="5" x="14" y="3" rx="1" />
@@ -18,7 +18,7 @@
             <span>Beranda</span>
         </a>
 
-        <a href="/monitoring" class="flex items-center px-4 py-3 rounded-md {{ Request::is('monitoring') ? 'bg-green-500 text-white' : 'text-gray-700 hover:bg-gray-100' }}">
+        <a href="/monitoring" class="flex items-center px-4 py-3 rounded-md {{ Request::is('monitoring') ? 'bg-greenModal text-white' : 'text-gray-700 hover:bg-gray-100' }}">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect width="18" height="18" x="3" y="3" rx="2" />
                 <path d="M17 12h-2l-2 5-2-10-2 5H7" />
@@ -26,15 +26,16 @@
             <span>Monitoring</span>
         </a>
 
-        <a href="/riwayatMonitoring" class="flex items-center px-4 py-3 rounded-md {{ Request::is('riwayatMonitoring') ? 'bg-green-500 text-white' : 'text-gray-700 hover:bg-gray-100' }}">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <a href="/riwayatMonitoring" class="flex items-center px-4 py-3 rounded-md {{ Request::is('riwayatMonitoring') ? 'bg-greenModal text-white' : 'text-gray-700 hover:bg-gray-100' }}">
+            {{-- <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect width="18" height="18" x="3" y="3" rx="2" />
                 <path d="M17 12h-2l-2 5-2-10-2 5H7" />
-            </svg>
+            </svg> --}}
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-history"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg>
             <span>Riwayat Monitoring</span>
         </a>
 
-        <a href="/article" class="flex items-center px-4 py-3 rounded-md {{ Request::is('article') ? 'bg-green-500 text-white' : 'text-gray-700 hover:bg-gray-100' }}">
+        <a href="/article" class="flex items-center px-4 py-3 rounded-md {{ Request::is('article') ? 'bg-greenModal text-white' : 'text-gray-700 hover:bg-gray-100' }}">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2" />
                 <path d="M18 14h-8" />
@@ -44,7 +45,7 @@
             <span>Artikel</span>
         </a>
 
-        <a href="/profile" class="flex items-center px-4 py-3 rounded-md {{ Request::is('profile') ? 'bg-green-500 text-white' : 'text-gray-700 hover:bg-gray-100' }}">
+        <a href="/profile" class="flex items-center px-4 py-3 rounded-md {{ Request::is('profile') ? 'bg-greenModal text-white' : 'text-gray-700 hover:bg-gray-100' }}">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="8" r="5" />
                 <path d="M20 21a8 8 0 0 0-16 0" />

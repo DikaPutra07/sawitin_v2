@@ -18,18 +18,16 @@
 
     <!-- Filter -->
     <div class="flex items-center mb-4">
-        <button class="flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm">
-            <svg class="w-5 h-5 mr-2 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M6 2a1 1 0 011 1v1h6V3a1 1 0 112 0v1h1a2 2 0 012 2v1h-2v10a2 2 0 01-2 2H6a2 2 0 01-2-2V7H2V5a2 2 0 012-2h1V3a1 1 0 011-1zM4 7v10a1 1 0 001 1h8a1 1 0 001-1V7H4zm5 3a1 1 0 110 2 1 1 0 010-2z" />
-            </svg>
-            Filter Tanggal
+        <button class="flex items-center px-4 py-2 bg-white border-1 border-greentea rounded-md shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+            <p>Filter Tanggal</p>  
         </button>
     </div>
 
     <!-- Cards -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         @for ($i = 0; $i < 6; $i++)
-            <div class="bg-white border border-gray-200 rounded-md shadow-sm overflow-hidden">
+            <div class="bg-creme border-1 border-greentea rounded-md shadow-sm overflow-hidden">
             <img src="{{ asset('uploads/foto1.jpg') }}" alt="Image" class="w-full h-32 object-cover">
             <div class="p-4">
                 <h3 class="text-lg font-semibold">Senin, 12 Januari 2023</h3>
@@ -37,7 +35,7 @@
                     <li>• Total Tanaman Terdeteksi: <span class="font-bold text-black">150</span> pohon</li>
                     <li>• Tanaman Terdeteksi Berisiko (Penyakit / Hama): <span class="font-bold text-red-500">30</span> pohon</li>
                 </ul>
-                <a href="#" class="text-green-600 mt-4 inline-block font-medium">Lihat Detail</a>
+                <a href="monitoring" class="text-green-600 mt-4 inline-block font-medium">Lihat Detail</a>
             </div>
     </div>
     @endfor
