@@ -27,3 +27,6 @@ Route::get('/article', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
+Route::get('/riwayatMonitoring', function () {
+    return view('riwayatmonitoring');
+});
