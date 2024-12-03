@@ -6,7 +6,7 @@
     <div class="flex justify-between items-center mb-6">
         <h4 class="text-xl font-semibold">Monitoring Tanaman</h4>
         <div class="flex items-center space-x-2">
-            <a href="#" class="ml-4 px-4 py-2 bg-greenModal text-white rounded hover:bg-green-600">Monitoring Sekarang</a>
+            <a href="#" class="ml-4 px-4 py-2 bg-greenModal text-white rounded hover:bg-green-600" id="defaultModalOpen">Monitoring Sekarang</a>
         </div>
     </div>
 
@@ -115,12 +115,58 @@
                 </div>
             </div>
         </div>
+                        {{-- fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden --}}
+        <!-- Main modal -->
+        <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden bg-gray-900 bg-opacity-50 overflow-y-auto overflow-x-hidden fixed inset-0 z-50 flex justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative p-4 w-full max-w-2xl max-h-full">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow">
+                    <!-- Modal header -->
+                    <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t bg-green-100">
+                        <h3 class="text-xl font-semibold text-gray-900 ">
+                            Pilih Jenis Monitoring
+                        </h3>
+                        <button type="button" id="closeModalDef" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center " data-modal-hide="default-modal">
+                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                            </svg>
+                            <span class="sr-only">Close modal</span>
+                        </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="p-4 md:p-5 space-y-4">
+                        <p class="text-base leading-relaxed text-black ">
+                            Silakan pilih jenis monitoring yang ingin dilakukan. Apakah Anda ingin memantau seluruh lahan atau hanya satu pohon secara spesifik?
+                        </p>
+                    </div>
+
+                    <div class="ml-5">
+                        <div class="flex items-center mb-4">
+                            <input disabled id="default-radio-1" type="radio" value="" name="default-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300">
+                            <label for="default-radio-1" class="ms-2 text-md font-sm text-black">Monitoring Lahan</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input disabled checked id="default-radio-2" type="radio" value="" name="default-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300">
+                            <label for="default-radio-2" class="ms-2 text-md font-sm text-black">Monitoring Pohon</label>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="flex items-center justify-end p-4 md:p-5 rounded-b dark:border-gray-600">
+                        <a href="/monitor-pohon" data-modal-hide="default-modal" type="button" class="text-white bg-greenModal hover:bg-green-600 font-sm rounded-lg text-md px-5 py-2.5 text-center">Next</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script>
                 // Get modal elements
                 const modal = document.getElementById('modal');
+                const defaultModal = document.getElementById('default-modal');
                 const openModalBtn = document.getElementById('openModal');
+                const openDefaultModalBtn = document.getElementById('defaultModalOpen');
                 const closeModalBtns = document.querySelectorAll('#closeModal, #closeModalFooter');
+                const closeModalBtn = document.querySelector('#closeModalDef');
 
                 // Open modal
                 openModalBtn.addEventListener('click', () => {
@@ -140,6 +186,21 @@
                     modal.classList.add('hidden');
                 }
                 });
+
+                openDefaultModalBtn.addEventListener('click', () => {
+                defaultModal.classList.remove('hidden');
+                });
+
+                closeModalBtn.addEventListener('click', () => {
+                defaultModal.classList.add('hidden');
+                });
+
+                defaultModal.addEventListener('click', (e) => {
+                if (e.target === defaultModal) {
+                    defaultModal.classList.add('hidden');
+                }
+                });
+
         </script>
     
 </div>
