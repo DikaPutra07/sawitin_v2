@@ -7,15 +7,6 @@
     <main class="flex-1 p-6">
         <div class="flex items-center justify-between mb-6">
             <h2 class="text-xl font-semibold">Artikel Terkait</h2>
-            <div class="flex items-center space-x-2">
-                <span class="text-gray-600">Hari Ini:</span>
-                <div class="bg-green-100 text-green-800 px-3 py-1 rounded-md">
-                    Minggu, 12 Januari 2023
-                </div>
-                <div class="bg-green-100 text-green-800 px-3 py-1 rounded-md">
-                    12:09:50 WIB
-                </div>
-            </div>
         </div>
 
         <!-- Search Bar -->

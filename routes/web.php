@@ -36,6 +36,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/riwayatMonitoring', function () {
         return view('riwayatmonitoring');
     });
+    Route::get('/monitor-pohon', function () {
+        return view('monitor-pohon');
+    });
 });
 
 require __DIR__ . '/auth.php';
