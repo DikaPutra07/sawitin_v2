@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\prediction;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -36,9 +37,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/riwayatMonitoring', function () {
         return view('riwayatmonitoring');
     });
-    Route::get('/monitor-pohon', function () {
-        return view('monitor-pohon');
-    });
+    Route::get('/monitoring-pohon', [prediction::class, 'index']);
+    Route::post('/monitoring-pohon', [prediction::class, 'predict']);
 });
 
 require __DIR__ . '/auth.php';
