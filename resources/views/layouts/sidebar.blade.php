@@ -4,11 +4,11 @@
     <!-- Navigation Links -->
     <nav class="flex flex-col space-y-2 p-4">
         <div class="p-4 flex items-center space-x-3">
-            <img src="{{ asset('uploads/logo.jpg') }}" alt="Logo" class="w-6 h-6">
-            <span class="text-lg font-semibold">Kelapa Sawit</span>
+            <img src="{{ asset('uploads/logo.png') }}" alt="Logo" class="w-full h-full">
+
         </div>
 
-        <a href="/" class="flex items-center px-4 py-3 rounded-md {{ Request::is('/') ? 'bg-greenModal text-white' : 'text-gray-700 hover:bg-gray-100' }}">
+        <a href="/dashboard" class="flex items-center px-4 py-3 rounded-md {{ Request::is('/') ? 'bg-greenModal text-white' : 'text-gray-700 hover:bg-gray-100' }}">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect width="7" height="9" x="3" y="3" rx="1" />
                 <rect width="7" height="5" x="14" y="3" rx="1" />
@@ -31,7 +31,11 @@
                 <rect width="18" height="18" x="3" y="3" rx="2" />
                 <path d="M17 12h-2l-2 5-2-10-2 5H7" />
             </svg> --}}
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-history"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-history">
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                <path d="M3 3v5h5" />
+                <path d="M12 7v5l4 2" />
+            </svg>
             <span>Riwayat Monitoring</span>
         </a>
 
@@ -72,5 +76,16 @@
             </svg>
             <span>Bantuan</span>
         </a>
+        <form method="POST" action="{{route('logout')}}" class="flex items-center text-gray-700 hover:bg-gray-100 rounded-md px-4 py-2">
+            @csrf
+            <button class="flex items-center text-gray-700 hover:bg-gray-100 rounded-md">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-help">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                    <path d="M12 17h.01" />
+                </svg>
+                <span>Logout</span>
+            </button>
+        </form>
     </div>
 </div>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,19 +15,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('auth.login');
+});
+
+Route::get('/dashboard', function () {
     return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/monitoring', function () {
+        return view('monitoring');
+    });
+
+    Route::get('/article', function () {
+        return view('article');
+    });
+    Route::get('/profile', function () {
+        return view('profile');
+    });
+    Route::get('/riwayatMonitoring', function () {
+        return view('riwayatmonitoring');
+    });
 });
 
-Route::get('/monitoring', function () {
-    return view('monitoring');
-});
-
-Route::get('/article', function () {
-    return view('article');
-});
-Route::get('/profile', function () {
-    return view('profile');
-});
-Route::get('/riwayatMonitoring', function () {
-    return view('riwayatmonitoring');
-});
+require __DIR__ . '/auth.php';
