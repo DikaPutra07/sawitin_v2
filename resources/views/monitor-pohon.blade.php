@@ -22,18 +22,18 @@
     <!-- Content Section -->
     <div class="w-2/3 p-6">
       <h2 class="text-lg font-semibold text-gray-700 mb-2"></h2>
-      <h3 class="text-xl font-bold text-green-600 mb-4">Prediction</h3>
-      <h3 class="text-xl font-bold text-green-600 mb-4">{{strtoupper($result['top'])}}</h3>
-      <p class="text-sm text-gray-600 font-semibold mb-2">Akurasi</p>
-      <p class="text-sm text-gray-600 mb-4">
-        {{$result['confidence']}}
+      <h3 class="text-xl font-bold text-green-600 mb-4">Prediction:</h3>
+      <h3 class="text-xl font-bold text-green-600 mb-4">{{($result['top'])}}</h3>
+      <p class="text-sm text-gray-600 font-semibold mb-2">Akurasi: {{$result['confidence']}}</p>
+      <p class="text-sm text-gray-600 mb-2">{{$result['1']}}</p>
+      <p class="text-sm text-gray-600 font-semibold mb-4">
+        Rekomendasi Tinndakan:
       </p>
       <ul class="list-disc pl-5 text-sm text-gray-600 space-y-2">
-        <li><span class="font-bold">Identifikasi Penyebab:</span> Tentukan apakah busuk disebabkan oleh jamur atau kerusakan fisik.</li>
-        <li><span class="font-bold">Pemangkasan:</span> Potong bagian yang terinfeksi untuk mencegah penyebaran.</li>
-        <li><span class="font-bold">Gunakan Fungisida:</span> Aplikasikan fungisida untuk mengatasi jamur.</li>
-        <li><span class="font-bold">Pemeliharaan Kebersihan:</span> Jaga kebersihan kebun dari sisa tanaman terinfeksi.</li>
-        <li><span class="font-bold">Penanaman Kembali:</span> Cabut pohon yang parah dan tanam bibit baru.</li>
+        <li>{{$result['2']}}</li>
+        <li>{{$result['3']}}</li>
+        <li>{{$result['4']}}</li>
+        <li>{{$result['5']}}</li>
       </ul>
     </div>
   </div>
